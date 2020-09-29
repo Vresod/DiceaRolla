@@ -27,5 +27,8 @@ async def roll(ctx, number_of_dice: int, number_of_sides: int):
         for _ in range(number_of_dice)
     ]
     await ctx.send(', '.join(dice))
+@client.command()
+async def help(ctx):
+    await ctx.send("use d!roll {number of dice} {number of sides} to roll the bones")
 
 client.run(token)
